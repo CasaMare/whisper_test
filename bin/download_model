@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -it whisper /app/models/download-ggml-model.sh $@ && docker cp whisper:/app/models/ggml-base.en.bin ./models

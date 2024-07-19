@@ -1,0 +1,9 @@
+#!/bin/bash
+docker run  -it -d --rm --name=whisper -v ./result:/app/result -v ./audios:/audios -v ./models:/app/models/local:delegated  ghcr.io/ggerganov/whisper.cpp:main "tail -f /dev/null"
+#docker run  -it -d --rm --name=whisper -v ./result:/app/result -v ./audios:/audios ghcr.io/ggerganov/whisper.cpp:main "tail -f /dev/null"
+#docker run -it --rm -v ./audios:/audios -v ./models:/app/models:delegated  ghcr.io/ggerganov/whisper.cpp:main "./main -m /app/models/ggml-base.en.bin  /audios/simpleTextMessage.wav"
+
+#docker run -it --rm -v ./audios:/audios   ghcr.io/ggerganov/whisper.cpp:main "./models/download-ggml-model.sh base.en && ./main -m /app/models/ggml-base.en.bin  /audios/realtest1.wav"
+#docker run -it --rm -v ./audios:/audios   ghcr.io/ggerganov/whisper.cpp:main "tail -f /dev/null"
+
+
